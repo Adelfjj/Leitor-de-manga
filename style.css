@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+body{
+    background-color: azure;
+}
+.container{
+    margin: 5px auto;
+    max-width: 400px;
+    height: calc(100vh - 10px);
+    position: relative;
+    border-radius: 30px;
+    background-color: white;
+    overflow:hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header{
+    overflow: hidden;
+    position: relative;
+}
+header .banner{
+    clip-path: polygon(0px 0px, 100% 0px, 99.75% 85.11%, 1px 44.64%);
+    height: 314px;
+    position: relative;
+}
+header .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header .banner .gradient{
+    top: 0;
+    left: 0;
+    position: absolute;
+    background:linear-gradient(234deg, rgba(0,0,0,0.34775908654477417) 0%, rgba(0,0,0,0) 100%);
+    height: 314px;
+    width: 400px;
+}
+header a.menu{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    
+}
+.main{
+    padding: 0 25px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 235px;
+}
+.main .titulo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.main .titulo h1{
+    font-size: 35px;
+}
+.main .titulo h1 span{
+    border-bottom: 2px solid black;
+    padding-bottom: 8px;
+}
+.main .titulo a {
+    margin-right: 5px;
+}
+.main .titulo i{
+    font-size: 40px;
+    color:#1195ab;
+}
+.main .sub-info{
+    display: flex;
+    margin: 15px 0 20px;
+    gap: 10px;
+}
+.main .sub-info h2, .main .sub-info p {
+    font-size: 12px;
+    font-weight:normal;
+}
+.main .sub-info h2 span{
+    font-weight: bold;
+}
+.main .sinopse{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main .sinopse p{
+    overflow: hidden;
+    display: -webkit-box;
+    line-height: 20px;
+    font-weight: normal;
+    font-size: 12px;
+    text-align:start;
+    color: rgb(0, 0, 0,0.5);
+    max-height: 64px;
+}
+.main .sinopse span{
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px 8px 5px 0;
+    color: #1195ab;
+}
+.main .capitulos{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.main .capitulos .todos{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    padding-bottom: 50px;
+    gap: 15px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width:none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.main .capitulos .todos figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    border: 1px dotted gray;
+    border-radius: 10px;
+    height: 100%;
+    scroll-snap-align: start;
+}
+.main .capitulos .todos figure img{
+    width: 150px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.main .capitulos .todos figure figcaption{
+    margin: 10px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+@media only screen and (max-width: 768px) {
+    .container{
+        margin: 0 auto;
+        border-radius: 0;
+    }
+    .main .capitulos .todos figure{
+        height: 100%;
+    }
+}
